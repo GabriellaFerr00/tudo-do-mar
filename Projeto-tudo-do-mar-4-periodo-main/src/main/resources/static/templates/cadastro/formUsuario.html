@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/extras/spring-security%22%3E">
+<head>
+    <meta charset="utf-8">
+    <title>Cadastro</title>
+    <link th:href="@{css/style-register.css}" rel="stylesheet">
+    <link th:href="@{/img/tdmlogo.png}" rel="icon">
+    <style>
+
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #C6D3DD;
+            background-size: 2000px;
+
+        }
+        img{
+            width: 100px;
+            margin-left: 35px;
+        }
+        div {
+
+            background-color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 15%;
+            left: 35%;
+            padding: 50px;
+            border-radius: 15px;
+            color: #2A3156;
+            font-size: 15px;
+        }
+            input{
+               padding: 15px;
+               border: 10px;
+               outline: black;
+
+
+            }
+            button
+            {
+                background-color: skyblue;
+                border: black;
+                padding: 15px;
+                width: 100%;
+                border-radius: 10px;
+                color: white;
+                font-size: 15px;
+                cursor: pointer;
+            }
+
+            button:hover{
+                background-color: deepskyblue;
+            }
+
+            .tdmlogo{
+            width: 100px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="center">
+    <img th:src="@{/img/tdmlogo.png}" class="tdmlogo"><br>
+    <h1 style="text-align: center"> <b>Cadastre-se</b> </h1>
+    <form action="#" th:action="@{/usuario/salvar}" th:object="${usuario}" method="POST">
+
+            <input type="text" th:field="*{nome}" class="form-control mb-4 col-4">
+        <br><br>
+            <span></span>
+            <label>Nome</label>
+            <input type="text" th:field="*{sobrenome}"  class="form-control mb-4 col-4">
+        <br><br>
+            <span></span>
+            <label>Sobrenome</label>
+            <input type="text" th:field="*{email}"  class="form-control mb-4 col-4">
+        <br><br>
+            <span></span>
+            <label>Email</label>
+            <input type="Password" th:field="*{senha}"  class="form-control mb-4 col-4">
+        <br><br>
+            <span></span>
+            <label>Senha</label>
+        <br><br>
+        <a href="index.html">
+            <button type="submit">Cadastrar</button>
+        </a>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/extras/spring-security%22%3E">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+ <style>
+     * {
+    margin: 0;
+    padding: 0;
+
+  }
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #C6D3DD;
+            background-size: 2000px;
+        }
+        img{
+            width: 100px;
+            margin-left: 35px;
+        }
+
+        div {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: absolute;
+            top: 29%;
+            left: 13%;
+            padding: 60px;
+            border-radius: 15px;
+            color: #2A3156;
+            font-size: 15px;
+        }
+            .input{
+               padding: 15px;
+               border: 10px;
+               outline: cyan;
+            }
+            button
+            {
+                background-color: skyblue;
+                border: none;
+                padding: 15px;
+                width: 100%;
+                border-radius: 10px;
+                color: white;
+                font-size: 15px;
+                cursor: pointer
+            }
+            button:hover{
+                background-color: deepskyblue;
+            }
+            .tdmlogo{
+            width: 100px;
+            margin-left: 35px;
+            margin-top: -10px;
+        }
+        .imgdash{
+            margin-top: -100px;
+            width: 700px;
+            margin-left: 600px;
+            position:static;
+            position:static;
+        }
+        .tdm{
+            width: 180px;
+            margin-top: 10px;
+            margin-left: 240px;
+        }
+ </style>
+</head>
+<body>
+<img class = "tdm" src="img/tdm3.png">
+<img class = "imgdash" src="img/dash5.png">
+<div>
+    <img class = "tdmlogo" :src="/img/tdmlogo.png"><br>
+    <h1 style="text-align: center"> <b>Login</b> </h1>
+    <form method="post">
+        <br><br>
+            <input type="text" required>
+            <span></span>
+            <label>Email</label>
+            <br><br>
+            <input type="password" required>
+            <span></span>
+            <label>Senha</label>
+        <br><br>
+           <a href="index.html">
+               <button>Entrar</button>
+           </a>
+            Não tem um cadastro? <a th:href="@{/usuario}">Cadastre-se</a>
+    </form>
+</div>
+</body>
+</html>
